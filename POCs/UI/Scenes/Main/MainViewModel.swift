@@ -8,4 +8,15 @@
 
 import Foundation
 
-struct MainViewModel {}
+protocol MainViewModelOutputs {
+    var apiURL: URL? { get }
+}
+
+struct MainViewModel: MainViewModelOutputs {
+
+    // MARK: - INTERNAL ATTRIBUTES
+
+    var apiURL: URL? {
+        URL(string: AppConfiguration.Keys.apiURL.value)
+    }
+}

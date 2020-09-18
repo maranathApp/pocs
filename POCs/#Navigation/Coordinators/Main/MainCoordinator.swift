@@ -36,6 +36,7 @@ final class MainCoordinator: Coordinator {
 
     func start() {
         let mainViewController = ViewControllerProvider.main
+        mainViewController.title = "Main"
         navigationController.viewControllers = [mainViewController]
     }
 }

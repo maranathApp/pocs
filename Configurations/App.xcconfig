@@ -1,0 +1,27 @@
+//
+//  App.xcconfig
+//  POCs
+//
+//  Created by Frezy Mboumba on 9/18/20.
+//  Copyright © 2020 MaranathApp. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// MARK: - APP
+
+ICON_NAME = AppIcon
+
+NAME = POCs
+
+BUNDLE_IDENTIFIER = io.maranathapp.pocs
+
+// MARK: - API
+
+API_URL = api.google.com
+
+// MARK: - THEMING
+
+PRIMARY_COLOR = 2ECC71
+SECONDARY_COLOR = CACFD2

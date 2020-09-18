@@ -8,11 +8,18 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
-    // MARK: - INTERNAL ATTRIBUTES
+    // MARK: - PRIVATE ATTRIBUTES
 
-    var viewModel: MainViewModel
+    private var viewModel: MainViewModel
+
+    private let label: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
 
     // MARK: - INITIALIZERS
 
@@ -31,6 +38,22 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .lightGray
+        setupView()
+    }
+
+    // MARK: - PRIVATE METHODS
+
+    private func setupView() {
+        label.text = viewModel.apiURL?.absoluteString
+        view.addSubview(label)
+
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+
+        view.backgroundColor = ThemeConfiguration.Keys.secondaryColor.value
+        navigationController?.navigationBar.barTintColor = ThemeConfiguration.Keys.primaryColor.value
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
 }

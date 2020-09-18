@@ -1,0 +1,42 @@
+//
+//  Base.xcconfig
+//  BYMiOS
+//
+//  Created by Frezy Mboumba on 8/1/20.
+//  Copyright © 2020 ANJC. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "App.xcconfig"
+
+// MARK: - APP
+
+APP_ICON_NAME_DEV = $(ICON_NAME).dev
+APP_ICON_NAME_STG = $(ICON_NAME).stg
+APP_ICON_NAME_PRD = $(ICON_NAME)
+
+APP_NAME_DEV = $(NAME) Dev
+APP_NAME_STG = $(NAME) Staging
+APP_NAME_PRD = $(NAME)
+
+APP_BUNDLE_IDENTIFIER_DEV = $(BUNDLE_IDENTIFIER).dev
+APP_BUNDLE_IDENTIFIER_STG = $(BUNDLE_IDENTIFIER).stg
+APP_BUNDLE_IDENTIFIER_PRD = $(BUNDLE_IDENTIFIER).prd
+
+
+// Specific to each environment
+APP_BUILD_NUMBER_DEV = 12
+APP_BUILD_NUMBER_STG = 10
+APP_BUILD_NUMBER_PRD = 305
+
+APP_VERSION_NUMBER_DEV = 1.0.1
+APP_VERSION_NUMBER_STG = 2.0.23
+APP_VERSION_NUMBER_PRD = 1.15.34
+
+// MARK: - API
+
+API_URL_DEV = https:/$()/dev.$(API_URL)
+API_URL_STG = https:/$()/stg.$(API_URL)
+API_URL_PRD = https:/$()/prd.$(API_URL)

@@ -1,0 +1,28 @@
+//
+//  Development.xcconfig
+//  BYMiOS
+//
+//  Created by Frezy Mboumba on 8/1/20.
+//  Copyright © 2020 ANJC. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Base.xcconfig"
+
+// MARK: - APP
+
+APP_ICON_NAME = $(APP_ICON_NAME_DEV)
+
+APP_NAME = $(APP_NAME_DEV)
+
+APP_BUNDLE_IDENTIFIER = $(APP_BUNDLE_IDENTIFIER_DEV)
+
+APP_BUILD_NUMBER = $(APP_BUILD_NUMBER_DEV)
+
+APP_VERSION_NUMBER = $(APP_VERSION_NUMBER_DEV)
+
+// MARK: - API
+
+APP_API_URL = $(API_URL_DEV)
